@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Design tokens ────────────────────────────────────────────────────────
+   Light and dark are the same token names with different values, so every
+   component can be written once without `dark:` colour pairs everywhere. */
+:root {
+  --bg: #f6f8f7;
+  --bg-alt: #eef1ef;
+  --surface: #ffffff;
+  --border: rgb(11 26 22 / 0.09);
+  --border-strong: rgb(11 26 22 / 0.16);
+  --ink: #0e1512;
+  /* `faint` and `accent` carry 11px mono labels, so both clear 4.5:1 on --bg
+     rather than sitting at the lighter tint the design would otherwise want. */
+  --muted: #4d5a55;
+  --faint: #5f6d67;
+  --accent: #0a7d5d;
+  --accent-soft: rgb(10 125 93 / 0.1);
+  --shadow: 0 1px 2px rgb(11 26 22 / 0.04), 0 12px 32px -16px rgb(11 26 22 / 0.18);
+}
+
+.dark {
+  --bg: #080b0a;
+  --bg-alt: #0d1211;
+  --surface: #101614;
+  --border: rgb(255 255 255 / 0.08);
+  --border-strong: rgb(255 255 255 / 0.16);
+  --ink: #e7ece9;
+  --muted: #9aa9a3;
+  --faint: #7b8a84;
+  --accent: #2dd4a7;
+  --accent-soft: rgb(45 212 167 / 0.12);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -16px rgb(0 0 0 / 0.7);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@utility card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
