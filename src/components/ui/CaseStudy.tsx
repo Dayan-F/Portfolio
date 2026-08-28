@@ -6,6 +6,7 @@ import StatTile from '@/components/ui/StatTile'
 import type { Role } from '@/data/experiences'
 import { useLang } from '@/hooks/useLang'
 import { cn } from '@/lib/cn'
+import { asset } from '@/lib/asset'
 
 type Props = {
   role: Role
@@ -28,7 +29,7 @@ export default function CaseStudy({ role, index }: Props) {
           {role.logo && (
             <DetectionFrame className="shrink-0 p-1.5" active={isCurrent}>
               <img
-                src={role.logo}
+                src={asset(role.logo)}
                 alt=""
                 loading="lazy"
                 className="size-12 rounded-md bg-white object-contain p-1"

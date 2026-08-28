@@ -7,6 +7,7 @@ import { profile } from '@/data/profile'
 import { roles } from '@/data/experiences'
 import { useLang } from '@/hooks/useLang'
 import { sectionLinkHandler } from '@/lib/scrollToSection'
+import { asset } from '@/lib/asset'
 
 const SOCIALS = [
   { key: 'github', href: profile.github, Icon: Github },
@@ -123,7 +124,7 @@ export default function Hero() {
         >
           <DetectionFrame label="engineer 0.99" active className="p-3">
             <img
-              src={profile.photo}
+              src={asset(profile.photo)}
               alt={t.a11y.portrait}
               className="aspect-square w-full rounded-lg object-cover"
             />

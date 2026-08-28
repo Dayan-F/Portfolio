@@ -3,6 +3,7 @@ import SectionHeading from '@/components/ui/SectionHeading'
 import Reveal from '@/components/ui/Reveal'
 import { education } from '@/data/experiences'
 import { useLang } from '@/hooks/useLang'
+import { asset } from '@/lib/asset'
 
 export default function Background() {
   const { lang, t } = useLang()
@@ -30,7 +31,7 @@ export default function Background() {
                 <div className="flex items-start gap-4">
                   {item.logo && (
                     <img
-                      src={item.logo}
+                      src={asset(item.logo)}
                       alt=""
                       loading="lazy"
                       className="mt-0.5 size-9 shrink-0 rounded-md border border-border bg-white object-contain p-0.5 opacity-80 transition-opacity group-hover:opacity-100"
