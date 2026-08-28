@@ -19,7 +19,14 @@ export default function Projects() {
 
       <ul className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
-          <Reveal as="li" key={project.id} delay={index * 0.08} className="h-full">
+          <Reveal
+            as="li"
+            key={project.id}
+            delay={index * 0.08}
+            /* The one that runs on this page leads, full width: it is the only
+               project a visitor can try without going anywhere. */
+            className={project.route ? 'h-full md:col-span-2' : 'h-full'}
+          >
             <ProjectCard project={project} />
           </Reveal>
         ))}

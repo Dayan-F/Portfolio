@@ -1,6 +1,7 @@
 import { ArrowUp } from 'lucide-react'
 import { profile } from '@/data/profile'
 import { useLang } from '@/hooks/useLang'
+import { sectionLinkHandler } from '@/lib/scrollToSection'
 
 export default function Footer() {
   const { t } = useLang()
@@ -12,7 +13,11 @@ export default function Footer() {
           © {new Date().getFullYear()} {profile.name}
         </span>
         <span>{t.footer.built}</span>
-        <a href="#top" className="inline-flex items-center gap-1.5 transition-colors hover:text-accent">
+        <a
+          href="#top"
+          onClick={sectionLinkHandler('top')}
+          className="inline-flex items-center gap-1.5 transition-colors hover:text-accent"
+        >
           {t.footer.back}
           <ArrowUp size={12} />
         </a>

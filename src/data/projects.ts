@@ -12,10 +12,29 @@ export type Project = {
   source: string
   /** Deployed, publicly reachable instance — omitted when there isn't one. */
   demo?: string
+  /** Route within this site, for a demo that runs on the page rather than off it. */
+  route?: string
   tech: string[]
 } & Record<Lang, LocalizedProject>
 
 export const projects: Project[] = [
+  {
+    id: 'agent-playground',
+    name: 'Agent graph playground',
+    source: 'https://github.com/Dayan-F/Portfolio',
+    route: '/demo/agents',
+    tech: ['LangGraph-style', 'React', 'TypeScript', 'Claude', 'Groq', 'Tool use'],
+    en: {
+      tagline: 'A supervisor routing real work through real agents, live on this page.',
+      description:
+        'Type a task and watch a supervisor decide which of three workers takes it, then hand control back and decide again. The workers call real tools: BM25 retrieval over this site, Wikipedia, live weather, a calculator. Every routing decision and tool call streams into a graph as it happens. Bring an Anthropic or Groq key; there is no server and nothing is simulated.',
+    },
+    fr: {
+      tagline: 'Un superviseur qui route du vrai travail vers de vrais agents, sur cette page.',
+      description:
+        "Saisissez une tâche et regardez un superviseur choisir lequel des trois agents s'en charge, puis reprendre la main et décider à nouveau. Les agents appellent de vrais outils : recherche BM25 sur ce site, Wikipédia, météo en direct, calculatrice. Chaque décision de routage et chaque appel d'outil s'affichent dans le graphe en direct. Apportez une clé Anthropic ou Groq ; il n'y a aucun serveur et rien n'est simulé.",
+    },
+  },
   {
     id: 'openmail',
     name: 'OpenMail',
@@ -51,5 +70,3 @@ export const projects: Project[] = [
   },
 ]
 
-/** The one deployment worth surfacing above the fold. */
-export const featuredDemo = projects.find((project) => project.demo)

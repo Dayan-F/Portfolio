@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Play } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import PointField from '@/components/ui/PointField'
 import DetectionFrame from '@/components/ui/DetectionFrame'
+import DemoMenu from '@/components/ui/DemoMenu'
 import { profile } from '@/data/profile'
 import { roles } from '@/data/experiences'
-import { featuredDemo } from '@/data/projects'
 import { useLang } from '@/hooks/useLang'
+import { sectionLinkHandler } from '@/lib/scrollToSection'
 
 const SOCIALS = [
   { key: 'github', href: profile.github, Icon: Github },
@@ -73,27 +74,14 @@ export default function Hero() {
           >
             <a
               href="#work"
+              onClick={sectionLinkHandler('work')}
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-90"
             >
               {t.hero.cta}
               <ArrowDown size={15} className="transition-transform group-hover:translate-y-0.5" />
             </a>
 
-            {featuredDemo?.demo && (
-              <a
-                href={featuredDemo.demo}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="group inline-flex items-center gap-2 rounded-full border border-accent px-5 py-2.5 text-sm font-medium text-accent transition-colors hover:bg-accent-soft"
-              >
-                <Play size={13} className="fill-current" />
-                {t.hero.demo}
-                <ArrowUpRight
-                  size={14}
-                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </a>
-            )}
+            <DemoMenu variant="hero" />
 
             <div className="flex items-center gap-2">
               {SOCIALS.map(({ key, href, Icon }) => (

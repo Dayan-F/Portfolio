@@ -18,6 +18,9 @@
   --faint: #5f6d67;
   --accent: #0a7d5d;
   --accent-soft: rgb(10 125 93 / 0.1);
+  /* `warn` labels failures in the demo trace at 11px, so it clears 4.5:1 too. */
+  --warn: #a2530a;
+  --warn-soft: rgb(162 83 10 / 0.1);
   --shadow: 0 1px 2px rgb(11 26 22 / 0.04), 0 12px 32px -16px rgb(11 26 22 / 0.18);
 }
 
@@ -32,6 +35,8 @@
   --faint: #7b8a84;
   --accent: #2dd4a7;
   --accent-soft: rgb(45 212 167 / 0.12);
+  --warn: #fbbf24;
+  --warn-soft: rgb(251 191 36 / 0.12);
   --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -16px rgb(0 0 0 / 0.7);
 }
 
@@ -46,6 +51,8 @@
   --color-faint: var(--faint);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
 
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -86,6 +93,23 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Flow along the edge the graph is currently traversing. Reversed when a worker
+   is reporting back up to the supervisor. */
+@keyframes edge-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.edge-active {
+  stroke-dasharray: 5 7;
+  animation: edge-flow 0.9s linear infinite;
+}
+
+.edge-active-reverse {
+  animation-direction: reverse;
 }
 
 @utility card {

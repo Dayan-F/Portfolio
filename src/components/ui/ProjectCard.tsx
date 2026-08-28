@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ArrowUpRight, Github, Play } from 'lucide-react'
 import type { Project } from '@/data/projects'
 import { useLang } from '@/hooks/useLang'
@@ -11,13 +12,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-display text-xl font-semibold">{project.name}</h3>
 
-        {project.demo && (
+        {(project.demo || project.route) && (
           <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 font-mono text-[10px] tracking-wide text-accent uppercase">
             <span className="relative flex size-1.5">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-70" />
               <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
             </span>
-            {t.projects.liveBadge}
+            {project.route ? t.projects.interactiveBadge : t.projects.liveBadge}
           </span>
         )}
       </div>
@@ -39,6 +40,16 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       {/* Pushed to the bottom so buttons line up across cards of unequal height */}
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
+        {project.route && (
+          <Link
+            to={project.route}
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+          >
+            <Play size={13} className="fill-current" />
+            {t.projects.open}
+          </Link>
+        )}
+
         {project.demo && (
           <a
             href={project.demo}
