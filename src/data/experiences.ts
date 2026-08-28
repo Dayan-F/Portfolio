@@ -44,7 +44,7 @@ export const roles: Role[] = [
     en: {
       role: 'Computer Vision Engineer',
       period: '2024 - Present',
-      headline: 'A full field season of imagery, processed in ten days instead of a year.',
+      headline: 'The computer vision behind a full season of crop field data.',
       narrative:
         'I build and maintain the computer-vision pipelines that turn raw field captures (RGB, multispectral, thermal, LiDAR, stereovision) into plant traits agronomists can act on. I own client projects end to end, from sensor calibration through to the distributed workers that process and deliver the data, and sit in a cross-functional product squad shaping what gets built next.',
       focus: [
@@ -56,8 +56,7 @@ export const roles: Role[] = [
       ],
       stats: [
         { value: '~1 yr → ~10 d', label: 'processing time per campaign' },
-        { value: '5', label: 'sensor modalities in production' },
-        { value: '4', label: 'international research partners' },
+        { value: 'LAI, NDVI, height, volume', label: 'plant traits extracted' },
       ],
       bullets: [
         'Optimize and maintain existing processing pipelines based on cameras (RGB, multispectral, thermal) and 3D sensors (LiDAR, stereovision)',
@@ -71,7 +70,7 @@ export const roles: Role[] = [
     fr: {
       role: 'Ingénieure Computer Vision',
       period: '2024 - Présent',
-      headline: 'Une campagne entière d’imagerie traitée en dix jours au lieu d’un an.',
+      headline: 'La vision par ordinateur derrière une saison complète de données de terrain.',
       narrative:
         'Je développe et maintiens les chaînes de traitement qui transforment les acquisitions terrain (RGB, multispectral, thermique, LiDAR, stéréovision) en traits végétaux exploitables par les agronomes. Je pilote les projets clients de bout en bout, de la calibration capteurs aux workers distribués qui traitent et livrent les données, au sein d’un product squad transverse qui décide de ce qu’on construit ensuite.',
       focus: [
@@ -83,8 +82,7 @@ export const roles: Role[] = [
       ],
       stats: [
         { value: '~1 an → ~10 j', label: 'de traitement par campagne' },
-        { value: '5', label: 'modalités de capteurs en production' },
-        { value: '4', label: 'partenaires de recherche internationaux' },
+        { value: 'LAI, NDVI, hauteur, volume', label: 'traits végétaux extraits' },
       ],
       bullets: [
         'Optimiser et maintenir les chaînes de traitement existantes basées sur des caméras (RGB, multispectral, thermique) et des capteurs 3D (LiDAR, stéréovision)',
@@ -108,7 +106,7 @@ export const roles: Role[] = [
     en: {
       role: 'Data Scientist / Computer Vision Intern',
       period: 'Feb. - Aug. 2023',
-      headline: 'Catching defects on a pharmaceutical line with 98% accuracy.',
+      headline: 'Object detection for defect inspection on a pharmaceutical line.',
       narrative:
         'A solo project inside Expleo’s Innovation department: benchmark object-detection models for anomaly detection on syringe images, build the dataset and augmentation pipeline behind them, and hand over the result as a container ready for production.',
       focus: ['Object detection', 'Dataset engineering', 'Containerized delivery'],
@@ -127,7 +125,7 @@ export const roles: Role[] = [
     fr: {
       role: 'Stagiaire Data Scientist / Computer Vision',
       period: 'Fév. - Août 2023',
-      headline: 'Détecter les défauts d’une ligne pharmaceutique avec 98 % de précision.',
+      headline: 'Détection d’objets pour l’inspection de défauts sur une ligne pharmaceutique.',
       narrative:
         'Projet mené en autonomie au sein du département Innovation d’Expleo : benchmarker des modèles de détection d’objets pour repérer les anomalies sur des images de seringues, construire le dataset et le pipeline d’augmentation associés, et livrer le modèle conteneurisé prêt pour la production.',
       focus: ['Détection d’objets', 'Ingénierie de dataset', 'Livraison conteneurisée'],

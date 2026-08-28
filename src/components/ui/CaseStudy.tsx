@@ -105,7 +105,14 @@ export default function CaseStudy({ role, index }: Props) {
 
         <p className="mt-5 max-w-2xl leading-relaxed text-muted">{content.narrative}</p>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-3">
+        {/* Columns follow the number of stats, so a role with two does not sit
+            in a three-column grid with a hole where the third would be. */}
+        <div
+          className={cn(
+            'mt-8 grid gap-5',
+            content.stats.length === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-3',
+          )}
+        >
           {content.stats.map((stat) => (
             <StatTile key={stat.label} value={stat.value} label={stat.label} />
           ))}
