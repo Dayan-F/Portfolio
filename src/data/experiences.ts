@@ -46,13 +46,14 @@ export const roles: Role[] = [
       period: '2024 - Present',
       headline: 'The computer vision behind a full season of crop field data.',
       narrative:
-        'I build and maintain the computer-vision pipelines that turn raw field captures (RGB, multispectral, thermal, LiDAR, stereovision) into plant traits agronomists can act on. I own client projects end to end, from sensor calibration through to the distributed workers that process and deliver the data, and sit in a cross-functional product squad shaping what gets built next.',
+        'I build and maintain the computer-vision pipelines that turn raw field captures (RGB, multispectral, thermal, LiDAR, stereovision) into plant traits agronomists can act on. I own client projects end to end, from sensor calibration through to the distributed workers that process and deliver the data, and sit in a cross-functional product squad shaping what gets built next. I also bring generative AI into the team’s day-to-day, building AI agents and custom skills that automate repetitive work.',
       focus: [
         'Multisensor pipelines',
         '3D point clouds',
         'Deep learning',
         'Automation at scale',
         'Client delivery',
+        'AI-assisted workflows',
       ],
       stats: [
         { value: '~1 yr → ~10 d', label: 'processing time per campaign' },
@@ -63,6 +64,7 @@ export const roles: Role[] = [
         'Develop plant trait extraction modules (volume, height, LAI, NDVI, plant/ear counting) using classical methods (morphology, geometric computation on point clouds) and deep learning',
         'Set up an automated processing pipeline reducing annual campaign processing time from ~1 year to ~10 days',
         'Lead client projects end to end, from sensor calibration to deployment of workers automating data processing and delivery',
+        'Integrate generative AI into team workflows: build AI agents and custom skills to automate repetitive tasks and boost productivity',
         'Part of a cross-functional product squad: planning and prioritizing initiatives, estimating development effort and assessing feasibility vs. business value',
         'Collaborate with international partners: UM6P, ICARDA (Morocco), INRAE, MHCS',
       ],
@@ -72,13 +74,14 @@ export const roles: Role[] = [
       period: '2024 - Présent',
       headline: 'La vision par ordinateur derrière une saison complète de données de terrain.',
       narrative:
-        'Je développe et maintiens les chaînes de traitement qui transforment les acquisitions terrain (RGB, multispectral, thermique, LiDAR, stéréovision) en traits végétaux exploitables par les agronomes. Je pilote les projets clients de bout en bout, de la calibration capteurs aux workers distribués qui traitent et livrent les données, au sein d’un product squad transverse qui décide de ce qu’on construit ensuite.',
+        'Je développe et maintiens les chaînes de traitement qui transforment les acquisitions terrain (RGB, multispectral, thermique, LiDAR, stéréovision) en traits végétaux exploitables par les agronomes. Je pilote les projets clients de bout en bout, de la calibration capteurs aux workers distribués qui traitent et livrent les données, au sein d’un product squad transverse qui décide de ce qu’on construit ensuite. J’intègre aussi l’IA générative au quotidien de l’équipe, avec des agents IA et des skills sur mesure qui automatisent les tâches répétitives.',
       focus: [
         'Pipelines multi-capteurs',
         'Nuages de points 3D',
         'Deep learning',
         'Automatisation à l’échelle',
         'Livraison client',
+        'Workflows assistés par IA',
       ],
       stats: [
         { value: '~1 an → ~10 j', label: 'de traitement par campagne' },
@@ -89,6 +92,7 @@ export const roles: Role[] = [
         'Développer des modules d’extraction de traits végétaux (volume, hauteur, LAI, NDVI, comptage de plantes/épis) via des méthodes classiques (morphologie, calcul géométrique sur nuages de points) et deep learning',
         'Mettre en place un pipeline de traitement automatique réduisant le temps de traitement d’une campagne annuelle de ~1 an à ~10 jours',
         'Piloter des projets clients de A à Z, de la calibration capteurs au déploiement de workers automatisant le traitement et la livraison des données',
+        'Intégrer l’IA générative dans les workflows de l’équipe : développement d’agents IA et de skills sur mesure pour automatiser les tâches répétitives et gagner en productivité',
         'Membre d’un cross-functional product squad : priorisation des initiatives, chiffrage des efforts de développement et évaluation de leur pertinence métier',
         'Collaborer avec des partenaires internationaux : UM6P, ICARDA (Maroc), INRAE, MHCS',
       ],

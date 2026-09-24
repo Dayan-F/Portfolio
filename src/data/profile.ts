@@ -15,7 +15,7 @@ export const profile = {
     fr: 'Ingénieure Vision par Ordinateur & IA',
   } satisfies Record<Lang, string>,
   summary: {
-    en: 'Computer Vision & AI Engineer with 2+ years of experience in deep learning, multisensor data processing (RGB, LiDAR, multispectral, thermal), and automated pipeline development. Currently expanding into generative AI and agent-based systems (LangChain, LangGraph, RAG).',
-    fr: 'Ingénieure en vision par ordinateur et IA avec 2+ ans d’expérience en deep learning, traitement de données multi-capteurs (RGB, LiDAR, multispectral, thermique) et développement de pipelines automatisés. Actuellement en montée en compétences sur l’IA générative et les systèmes à base d’agents (LangChain, LangGraph, RAG).',
+    en: 'Computer Vision & AI Engineer with 2+ years of experience in deep learning, multisensor data processing (RGB, LiDAR, multispectral, thermal), and automated pipeline development. Hands-on experience integrating generative AI solutions and agentic workflows (LangChain, LangGraph, RAG) within the company.',
+    fr: 'Ingénieure en vision par ordinateur et IA avec 2+ ans d’expérience en deep learning, traitement de données multi-capteurs (RGB, LiDAR, multispectral, thermique) et développement de pipelines automatisés. Expérience concrète dans l’intégration de solutions d’IA générative et de workflows agentiques (LangChain, LangGraph, RAG) au sein de l’entreprise.',
   } satisfies Record<Lang, string>,
 }
